@@ -2,9 +2,13 @@
 
 :root {
     --light: #FDF4F5;
+    --darkened-light: rgba(253, 244, 245, 0.8);
     --pink: #E8A0BF;
+    --darkened-pink: rgba(232, 160, 191, 0.8);
     --purple: #BA90C6;
+    --darkened-purple: rgba(186, 144, 198, 0.8);
     --blue: #C0DBEA;
+    --darkened-blue: rgba(192, 219, 234, 0.8);
 }
 
 body {
@@ -32,6 +36,9 @@ body {
 .calculator-top, .calculator-bottom {
     width: 100%;
     height: 100%;
+}
+
+.screen, .clear {
     background-color: var(--light);
 }
 
@@ -77,9 +84,19 @@ body {
     border-radius: 10px;
 }
 
+.number:hover {
+    background-color: var(--darkened-blue);
+    cursor: pointer;
+}
+
 .equals {
     grid-column: span 2;
     background-color: var(--purple);
+}
+
+.equals:hover {
+    background-color: var(--darkened-purple);
+    cursor: pointer;
 }
 
 .buttons {
@@ -98,8 +115,27 @@ body {
     border-radius: 10px;
 }
 
-/* .screen {
-    display: flex;
-    text-align: end;
-    width: 100%;
-} */
+.button:hover {
+    background-color: var(--darkened-pink);
+    cursor: pointer;
+}
+
+.equals, .button {
+    font-size: 2.5rem;
+}
+
+.screen, .clear {
+    font-size: 4rem;
+}
+
+.screen {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.clear:hover {
+    background-color: var(--darkened-light);
+    cursor: pointer;
+}
