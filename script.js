@@ -110,7 +110,7 @@ const populateScreen = () => {
             }
             // Buttons ( calculations )
             if (el.classList.contains('button')) {
-                if (secondValue === null) {
+                if (secondValue === null && operator === null) {
                     operator = el.textContent
                     document.querySelector('.screen').textContent += el.textContent
                 } else if (secondValue !== null && operator !== null){
